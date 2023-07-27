@@ -1,0 +1,25 @@
+name: example
+description: Flame texture packer example
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flame: ^1.8.1
+  flame_gdx_texture_packer:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.2
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
