@@ -8,7 +8,7 @@
 PRODUCT_NAME = example
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.yayocode.flame.texture.packer.example.example
+PRODUCT_BUNDLE_IDENTIFIER = com.example.gdx.texture.packer.example
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2023 com.yayocode.flame.texture.packer.example. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2023 com.example.gdx.texture.packer. All rights reserved.

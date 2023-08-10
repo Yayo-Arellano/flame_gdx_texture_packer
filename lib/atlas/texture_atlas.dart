@@ -7,7 +7,6 @@ import 'package:flame/flame.dart';
 import 'package:flame_gdx_texture_packer/atlas/model/page.dart';
 import 'package:flame_gdx_texture_packer/atlas/model/region.dart';
 import 'package:flame_gdx_texture_packer/atlas/model/atlas_sprite.dart';
-import 'package:collection/collection.dart';
 
 final _images = Images(prefix: 'assets/');
 
@@ -74,7 +73,7 @@ class _TextureAtlasData {
           page = Page();
           page.textureFile = line;
           final parentPath = (path.split('/')..removeLast()).join('/');
-          final texturePath = '$parentPath/$line';
+          final texturePath = parentPath.isEmpty ? line : '$parentPath/$line';
           page.texture = await _images.load(texturePath);
           while (true) {
             line = iterator.moveNextAndGet();
@@ -182,9 +181,18 @@ class _TextureAtlasData {
   }
 }
 
-extension _IteratorExtension on Iterator<String> {
-  String? moveNextAndGet() {
+extension _IteratorExtension<T> on Iterator<T> {
+  T? moveNextAndGet() {
     if (moveNext()) return current;
+    return null;
+  }
+}
+
+extension _IterableExtension<T> on Iterable<T> {
+  T? firstWhereOrNull(bool Function(T element) test) {
+    for (var element in this) {
+      if (test(element)) return element;
+    }
     return null;
   }
 }

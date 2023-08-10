@@ -1,3 +1,8 @@
+## 0.5.3
+
+* Fixes fail to load assets due to wrong path on Android
+* Updated to Flame 1.8.2
+
 ## 0.5.2
 
 * Update readme
