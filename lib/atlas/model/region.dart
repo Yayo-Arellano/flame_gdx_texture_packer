@@ -4,9 +4,9 @@ class Region {
   late Page page;
   late String name;
   late double left, top, width, height;
-  late double offsetX, offsetY;
-  late double originalWidth, originalHeight;
-  late int degrees;
-  late bool rotate;
-  late int index;
+  double offsetX = 0, offsetY = 0;
+  double originalWidth = 0, originalHeight = 0;
+  int degrees = 0;
+  bool rotate = false;
+  int index = -1;
 }

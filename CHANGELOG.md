@@ -1,3 +1,7 @@
+## 0.6.0
+
+* Added support for new atlas format
+
 ## 0.5.3
 
 * Fixes fail to load assets due to wrong path on Android

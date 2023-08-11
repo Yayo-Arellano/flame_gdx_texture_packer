@@ -4,22 +4,20 @@ import 'package:flame_gdx_texture_packer/flame_gdx_texture_packer.dart';
 import 'package:flutter/material.dart';
 
 main() {
-  final myGame = MyGame();
   runApp(
     GameWidget(
-      game: myGame,
+      game: MyGame(),
     ),
   );
 }
 
 class MyGame extends FlameGame {
-
   @override
   Future<void> onLoad() async {
     super.onLoad();
 
-    // Load the atlasMap.
-    final atlas = await fromAtlas('FlameAtlasMap.atlas');
+    // Load the sprite sheet
+    final atlas = await fromAtlas('atlasMap.atlas');
 
     // Get a list of sprites ordered by their index
     final walkingSprites = atlas.findSpritesByName('robot_walk');
@@ -30,7 +28,6 @@ class MyGame extends FlameGame {
       stepTime: 0.1,
       loop: true,
     );
-
 
     // Get individual sprites by name
     final jumpSprite = atlas.findSpriteByName('robot_jump')!;
