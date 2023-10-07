@@ -9,7 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flame: ^1.8.2
+  flame: ^1.9.1
   flame_gdx_texture_packer:
     path: ../
 
@@ -17,7 +17,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^2.0.2
+  flutter_lints: ^2.0.3
 
 flutter:
   uses-material-design: true

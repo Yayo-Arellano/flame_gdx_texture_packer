@@ -1,3 +1,7 @@
+## 0.6.1
+
+* Update flame dependencies
+
 ## 0.6.0
 
 * Added support for new atlas format
